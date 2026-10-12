@@ -1,0 +1,72 @@
+:root {
+  color-scheme: light;
+
+  --color-brand: #b91c1c;
+  --color-brand-hover: #991b1b;
+  --color-brand-dark: #7f1d1d;
+  --color-brand-light: #fef2f2;
+  --color-brand-mid: #fca5a5;
+
+  --color-stone-50: #fafaf9;
+  --color-stone-100: #f5f5f4;
+  --color-stone-200: #e7e5e4;
+  --color-stone-300: #d6d3d1;
+  --color-stone-400: #a8a29e;
+  --color-stone-500: #78716c;
+  --color-stone-600: #57534e;
+  --color-stone-700: #44403c;
+  --color-stone-800: #292524;
+  --color-stone-900: #1c1917;
+
+  --color-success: #15803d;
+  --color-success-light: #f0fdf4;
+  --color-warning: #b45309;
+  --color-warning-light: #fffbeb;
+  --color-danger: #dc2626;
+  --color-danger-light: #fef2f2;
+  --color-info: #1d4ed8;
+  --color-info-light: #eff6ff;
+
+  --color-teal: var(--color-brand);
+  --color-teal-dark: var(--color-brand-dark);
+  --color-teal-light: var(--color-brand-light);
+  --color-teal-mid: var(--color-brand-mid);
+
+  --color-viz-1: #b91c1c;
+  --color-viz-2: var(--color-brand);
+  --color-viz-3: #1d4ed8;
+  --color-viz-4: #b45309;
+  --color-viz-5: #6d28d9;
+  --color-viz-6: #0891b2;
+
+  --color-sidebar: #1c1917;
+  --color-sidebar-mid: #292524;
+  --color-sidebar-border: rgb(255 255 255 / 7%);
+  --color-white: #ffffff;
+  --color-surface: #fafaf9;
+  --color-surface-mid: #f5f5f4;
+  --color-panel: #ffffff;
+  --color-border: #e7e5e4;
+  --color-border-strong: #d6d3d1;
+  --color-ink: #1c1917;
+  --color-ink-secondary: #57534e;
+  --color-ink-muted: #78716c;
+  --color-ink-disabled: #a8a29e;
+
+  --color-primary: var(--color-brand);
+  --color-primary-dark: var(--color-brand-hover);
+  --color-primary-soft: var(--color-brand-light);
+  --color-coral: var(--color-brand);
+  --color-coral-soft: var(--color-brand-light);
+  --color-blue: var(--color-info);
+  --color-blue-soft: var(--color-info-light);
+  --color-paper: var(--color-stone-50);
+  --color-shadow: 28 25 23;
+
+  --font-body: "DM Sans", "Avenir Next", sans-serif;
+  --font-display: "Manrope", "Avenir Next", sans-serif;
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --content-width: 1200px;
+}

@@ -1,0 +1,60 @@
+.hero { position: relative; overflow: hidden; padding: 72px 0 28px; background: var(--color-surface); }
+.hero::before { position: absolute; top: -280px; right: -180px; width: 760px; aspect-ratio: 1; border: 1px solid color-mix(in srgb, var(--color-brand) 10%, transparent); border-radius: 50%; content: ""; }
+.inner { display: grid; width: min(calc(100% - 48px), var(--content-width)); min-height: 550px; grid-template-columns: 0.92fr 1.08fr; align-items: center; gap: 72px; margin: 0 auto; }
+.copy { position: relative; z-index: 1; padding: 26px 0 42px; animation: rise-in 600ms ease both; }
+.eyebrow, .cardLabel, .heroFoot, .photoCaption span { font-size: 12px; font-weight: 800; letter-spacing: 0; }
+.eyebrow { display: flex; align-items: center; gap: 9px; margin: 0 0 24px; color: var(--color-primary-dark); text-transform: uppercase; }
+.eyebrow span { width: 8px; aspect-ratio: 1; border-radius: 50%; background: var(--color-brand); box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-brand) 14%, transparent); }
+.copy h1 { margin: 0; font-size: clamp(42px, 5vw, 68px); font-weight: 700; letter-spacing: 0; line-height: 1.08; }
+.copy h1 em { color: var(--color-primary); font-style: normal; }
+.description { max-width: 490px; margin: 24px 0 28px; color: var(--color-stone-600); font-size: 16px; line-height: 1.75; }
+.actions { display: flex; align-items: center; gap: 24px; }
+.textLink { color: var(--color-ink); font-size: 15px; font-weight: 700; text-decoration: none; }
+.textLink span { margin-left: 5px; color: var(--color-primary); }
+.proof { display: flex; align-items: center; gap: 14px; margin-top: 40px; }
+.avatarStack { display: flex; padding-left: 4px; }
+.proofMark { display: grid; width: 40px; aspect-ratio: 1; flex: 0 0 auto; place-items: center; border-radius: 12px 12px 12px 4px; color: #ffffff; background: var(--color-brand); font-family: var(--font-display); font-size: 18px; font-weight: 800; }
+.proof p { margin: 0; color: var(--color-ink-secondary); font-size: 14px; line-height: 1.5; }
+.proof strong { color: var(--color-ink); font-size: 15px; }
+.visual { position: relative; min-height: 498px; animation: rise-in 750ms 100ms ease both; }
+.photo { position: absolute; top: 0; right: 0; width: 80%; height: 390px; border-radius: 180px 180px 8px 8px; background: var(--color-stone-300); object-fit: cover; object-position: center 35%; filter: saturate(0.72); }
+.visual::after { position: absolute; top: 0; right: 0; width: 80%; height: 390px; border-radius: 180px 180px 8px 8px; background: linear-gradient(180deg, rgb(28 25 23 / 0%) 35%, rgb(28 25 23 / 28%)); content: ""; pointer-events: none; }
+.responseCard { position: absolute; z-index: 1; top: 110px; left: 0; width: min(385px, 84%); padding: 22px; border: 1px solid color-mix(in srgb, var(--color-stone-200) 80%, transparent); border-radius: 8px; background: var(--color-panel); box-shadow: 0 24px 70px rgb(var(--color-shadow) / 18%); animation: float-in 700ms 200ms ease both; }
+.cardLabel { margin: 0; color: var(--color-stone-600); }
+.responseCard h2 { margin: 8px 0 18px; font-size: 20px; }
+.responseSteps { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: response-step; }
+.responseSteps li { position: relative; display: grid; min-height: 58px; align-content: center; gap: 2px; padding: 8px 0 8px 38px; border-top: 1px solid var(--color-border); counter-increment: response-step; }
+.responseSteps li::before { position: absolute; left: 0; display: grid; width: 26px; aspect-ratio: 1; place-items: center; border-radius: 50%; color: var(--color-brand-dark); background: var(--color-brand-light); content: counter(response-step); font-size: 13px; font-weight: 800; }
+.responseSteps li span { color: var(--color-ink); font-size: 15px; font-weight: 700; }
+.responseSteps li small { color: var(--color-ink-secondary); font-size: 13px; }
+.photoCaption { position: absolute; right: 0; bottom: 14px; display: grid; gap: 5px; color: #ffffff; text-align: right; }
+.photoCaption span { font-size: 12px; }
+.photoCaption strong { font-family: var(--font-display); font-size: 15px; }
+.heroFoot { display: flex; width: min(calc(100% - 48px), var(--content-width)); justify-content: space-between; margin: 12px auto 0; padding-top: 18px; border-top: 1px solid color-mix(in srgb, var(--color-stone-900) 12%, transparent); color: var(--color-stone-600); font-size: 12px; }
+@keyframes rise-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes float-in { from { opacity: 0; transform: translate(-8px, 12px); } to { opacity: 1; transform: translate(0, 0); } }
+
+@media (max-width: 900px) {
+  .inner { grid-template-columns: 1fr 0.92fr; gap: 32px; }
+  .visual { min-height: 435px; }
+  .photo, .visual::after { height: 340px; }
+  .responseCard { top: 90px; }
+}
+
+@media (max-width: 680px) {
+  .hero { padding-top: 42px; }
+  .inner { width: min(calc(100% - 36px), var(--content-width)); grid-template-columns: 1fr; gap: 20px; }
+  .copy { padding: 8px 0 0; }
+  .copy h1 { font-size: clamp(39px, 12vw, 56px); }
+  .description { margin: 18px 0 22px; font-size: 14px; }
+  .proof { margin-top: 25px; }
+  .visual { min-height: 410px; }
+  .photo, .visual::after { width: 82%; height: 315px; }
+  .responseCard { top: 48px; width: min(360px, 90%); padding: 18px; }
+  .photoCaption { bottom: 18px; }
+  .heroFoot { width: min(calc(100% - 36px), var(--content-width)); gap: 16px; font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy, .visual, .responseCard { animation: none; }
+}

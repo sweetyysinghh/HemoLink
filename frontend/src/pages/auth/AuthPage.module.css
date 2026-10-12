@@ -1,0 +1,53 @@
+.authPage { display: grid; min-height: 100vh; grid-template-columns: minmax(340px, 0.9fr) 1.1fr; background: #ffffff; }
+.story { display: flex; min-height: 100vh; flex-direction: column; justify-content: space-between; padding: 38px clamp(28px, 7vw, 100px); color: #ffffff; background: var(--color-sidebar); }
+.brand, .mobileBrand { display: inline-flex; align-items: center; gap: 10px; color: inherit; font-family: var(--font-display); font-size: 17px; font-weight: 800; text-decoration: none; }
+.brand span, .mobileBrand span { display: grid; width: 33px; aspect-ratio: 1; place-items: center; border-radius: 9px 9px 9px 3px; color: #ffffff; background: var(--color-primary); }
+.storyCopy { max-width: 460px; margin: 35px 0; }
+.eyebrow { margin: 0 0 12px; color: #ffffff; font-size: 13px; font-weight: 800; letter-spacing: 0; }
+.storyCopy h1 { margin: 0; font-size: clamp(36px, 4.6vw, 58px); font-weight: 700; line-height: 1.12; }
+.storyCopy > p:last-child { max-width: 370px; margin: 20px 0 0; color: var(--color-stone-300); font-size: 16px; line-height: 1.7; }
+.storyNote { display: flex; align-items: center; gap: 13px; padding-top: 18px; border-top: 1px solid rgb(255 255 255 / 16%); }
+.storyNote span { color: var(--color-brand-mid); font-family: Georgia, serif; font-size: 44px; line-height: 0.8; }
+.storyNote p { margin: 0; color: var(--color-stone-300); font-family: var(--font-display); font-size: 14px; }
+.formSide { display: grid; min-height: 100vh; place-items: center; padding: 36px 24px; }
+.formWrap { width: min(100%, 460px); }
+.formWrap > .eyebrow { margin-bottom: 8px; color: var(--color-primary); }
+.formWrap h2 { margin: 0; font-size: 30px; font-weight: 800; }
+.subtitle { margin: 8px 0 22px; color: var(--color-ink-secondary); font-size: 16px; }
+.form { display: grid; gap: 15px; }
+.roleField { min-width: 0; margin: 0 0 2px; padding: 0; border: 0; }
+.roleField legend { margin-bottom: 8px; color: var(--color-ink); font-size: 14px; font-weight: 700; }
+.roles { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.role { display: grid; min-height: 68px; align-content: center; gap: 3px; padding: 9px 11px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: #ffffff; cursor: pointer; text-align: left; }
+.roleSelected { border-color: var(--color-primary); background: var(--color-primary-soft); }
+.role strong { font-size: 14px; }
+.role span { color: var(--color-ink-secondary); font-size: 12px; }
+.field { display: grid; gap: 6px; color: var(--color-ink); font-size: 14px; font-weight: 700; }
+.field input, .field select { width: 100%; min-height: 48px; padding: 0 12px; border: 1px solid var(--color-border-strong); border-radius: var(--radius-sm); color: var(--color-ink); background: #ffffff; font-size: 16px; }
+.field input:focus, .field select:focus { border-color: var(--color-brand); }
+.field input::placeholder { color: var(--color-stone-600); }
+.fieldRow { display: grid; grid-template-columns: 0.7fr 1fr; gap: 10px; }
+.forgot { justify-self: end; margin-top: -7px; color: var(--color-primary-dark); font-size: 14px; font-weight: 700; text-decoration: none; }
+.submit { width: 100%; margin-top: 2px; }
+.submit span { margin-left: auto; }
+.demoHint { margin: -5px 0 0; color: var(--color-ink-secondary); font-size: 13px; text-align: center; }
+.switchMode { margin: 20px 0 0; color: var(--color-ink-secondary); font-size: 14px; text-align: center; }
+.switchMode a, .backLink { color: var(--color-primary-dark); font-weight: 700; text-decoration: none; }
+.backLink { display: block; margin-top: 16px; font-size: 14px; }
+.success { padding: 18px; border: 1px solid #b6d9ca; border-radius: var(--radius-sm); background: var(--color-primary-soft); }
+.success strong { font-size: 16px; }
+.success p { margin: 5px 0 0; color: var(--color-ink-secondary); font-size: 14px; }
+.mobileBrand { display: none; }
+
+@media (max-width: 760px) {
+  .authPage { grid-template-columns: 1fr; }
+  .story { display: none; }
+  .formSide { min-height: 100vh; align-items: start; padding-top: 38px; }
+  .mobileBrand { display: inline-flex; margin-bottom: 42px; color: var(--color-ink); }
+}
+
+@media (max-width: 420px) {
+  .formSide { padding: 25px 18px; }
+  .mobileBrand { margin-bottom: 34px; }
+  .formWrap h2 { font-size: 27px; }
+}
