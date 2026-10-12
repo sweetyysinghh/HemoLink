@@ -1,0 +1,49 @@
+.workflow, .testimonials { width: min(calc(100% - 48px), var(--content-width)); margin: 0 auto; padding: 88px 0; }
+.sectionHead { max-width: 600px; margin-bottom: 45px; }
+.kicker { margin: 0 0 12px; color: var(--color-primary); font-size: 13px; font-weight: 800; letter-spacing: 0; text-transform: uppercase; }
+.sectionHead h2, .testimonialHead h2, .aiIntro h2, .callout h2 { margin: 0; font-family: var(--font-display); font-size: 42px; font-weight: 700; line-height: 1.15; }
+.sectionHead > p:last-child, .aiIntro > p:not(.kicker) { max-width: 490px; margin: 15px 0 0; color: var(--color-ink-secondary); font-size: 16px; line-height: 1.7; }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--color-border); }
+.step { min-height: 184px; padding: 24px 28px 20px 0; border-right: 1px solid var(--color-border); }
+.step + .step { padding-left: 28px; }
+.step:last-child { border-right: 0; }
+.stepNo { display: inline-block; margin-bottom: 22px; color: var(--color-coral); font-size: 13px; font-weight: 800; }
+.step h3, .feature h3 { margin: 0 0 8px; font-size: 16px; font-weight: 700; }
+.step p, .feature p { max-width: 340px; margin: 0; color: var(--color-ink-secondary); font-size: 15px; line-height: 1.7; }
+.aiSection { display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 64px; padding: 76px max(24px, calc((100% - var(--content-width)) / 2)); background: var(--color-surface-mid); }
+.aiIntro h2 em { color: var(--color-primary); font-style: normal; }
+.aiIntro a { display: inline-block; margin-top: 23px; color: var(--color-primary-dark); font-size: 15px; font-weight: 700; text-decoration: none; }
+.featureList { border-top: 1px solid var(--color-stone-300); }
+.feature { display: grid; grid-template-columns: 44px 1fr 20px; align-items: start; gap: 15px; padding: 21px 0; border-bottom: 1px solid var(--color-stone-300); }
+.featureNumber { display: grid; width: 38px; aspect-ratio: 1; place-items: center; border-radius: 50%; color: var(--color-brand-dark); background: var(--color-brand-light); font-size: 13px; font-weight: 800; }
+.testimonials { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; align-items: start; }
+.testimonialHead h2 { font-size: 36px; }
+.quoteGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.quote { margin: 0; padding: 22px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-surface); }
+.quote blockquote { min-height: 102px; margin: 0 0 19px; color: var(--color-ink); font-family: var(--font-display); font-size: 16px; font-weight: 600; line-height: 1.65; }
+.quote figcaption { display: flex; align-items: center; gap: 9px; }
+.quote figcaption > span { display: grid; width: 36px; aspect-ratio: 1; place-items: center; border-radius: 50%; color: var(--color-primary-dark); background: var(--color-primary-soft); font-size: 14px; font-weight: 800; }
+.quote figcaption strong, .quote figcaption small { display: block; }
+.quote figcaption strong { font-size: 14px; }
+.quote figcaption small { margin-top: 2px; color: var(--color-ink-secondary); font-size: 13px; }
+.callout { display: flex; min-height: 240px; align-items: center; justify-content: space-between; gap: 20px; padding: 48px max(24px, calc((100% - var(--content-width)) / 2)); color: var(--color-stone-100); background: var(--color-sidebar); }
+.callout .kicker { color: #ffffff; }
+.callout h2 { font-size: 32px; }
+
+@media (max-width: 800px) {
+  .aiSection, .testimonials { grid-template-columns: 1fr; gap: 35px; }
+  .aiSection { padding: 60px 24px; }
+  .testimonials { padding: 62px 0; }
+  .sectionHead h2, .aiIntro h2 { font-size: 36px; }
+}
+
+@media (max-width: 600px) {
+  .workflow, .testimonials { width: calc(100% - 36px); padding: 58px 0; }
+  .steps { grid-template-columns: 1fr; }
+  .step, .step + .step { min-height: auto; padding: 18px 0; border-right: 0; border-bottom: 1px solid var(--color-border); }
+  .stepNo { margin-bottom: 9px; }
+  .quoteGrid { grid-template-columns: 1fr; }
+  .quote blockquote { min-height: auto; }
+  .callout { min-height: 250px; align-items: flex-start; flex-direction: column; justify-content: center; padding: 40px 18px; }
+  .callout h2 { font-size: 29px; }
+}

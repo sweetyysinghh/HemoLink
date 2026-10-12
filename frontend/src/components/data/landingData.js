@@ -1,0 +1,1 @@
+export { howItWorks, testimonials, footerLinks } from "../../data/landingData";

@@ -1,0 +1,49 @@
+.shell { display: flex; min-height: 100vh; background: var(--color-stone-50); }
+.sidebar { position: fixed; z-index: 5; inset: 0 auto 0 0; display: flex; width: 246px; flex-direction: column; padding: 23px 15px 15px; border-right: 1px solid var(--color-sidebar-border); background: var(--color-sidebar); }
+.brand { display: flex; align-items: center; gap: 9px; padding: 0 9px 24px; color: var(--color-stone-100); font-family: var(--font-display); font-size: 16px; font-weight: 800; text-decoration: none; }
+.brand span { display: grid; width: 30px; aspect-ratio: 1; place-items: center; border-radius: 8px 8px 8px 2px; color: var(--color-white); background: var(--color-brand); }
+.workspaceLabel { padding: 14px 10px 9px; border-top: 1px solid var(--color-sidebar-border); color: var(--color-stone-400); font-size: 9px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; }
+.navigation { display: grid; gap: 4px; }
+.navLink { display: flex; min-height: 40px; align-items: center; gap: 11px; padding: 0 10px; border-radius: 5px; color: var(--color-stone-500); font-size: 11px; font-weight: 600; text-decoration: none; }
+.navLink > span { display: grid; width: 22px; aspect-ratio: 1; place-items: center; border: 1px solid var(--color-sidebar-border); border-radius: 5px; color: var(--color-stone-500); font-size: 9px; font-weight: 800; }
+.navLink:hover, .active { color: var(--color-brand-mid); background: color-mix(in srgb, var(--color-brand) 12%, transparent); }
+.active > span { border-color: color-mix(in srgb, var(--color-brand) 25%, transparent); color: var(--color-brand-mid); background: transparent; }
+.sidebarBottom { margin-top: auto; }
+.backLink { display: block; padding: 12px 10px; border-top: 1px solid var(--color-sidebar-border); color: var(--color-stone-400); font-size: 10px; text-decoration: none; }
+.help { padding: 11px 10px 0; color: var(--color-stone-500); font-size: 9px; }
+.help a { display: block; margin-top: 5px; color: var(--color-primary); font-weight: 700; text-decoration: none; }
+.mainColumn { width: calc(100% - 246px); min-width: 0; margin-left: 246px; }
+.topbar { position: sticky; z-index: 3; top: 0; display: flex; min-height: 76px; align-items: center; justify-content: space-between; gap: 18px; padding: 12px 32px; border-bottom: 1px solid var(--color-border); background: rgb(255 255 255 / 94%); backdrop-filter: blur(12px); }
+.pageTitle h1 { margin: 0; font-size: 18px; font-weight: 800; }
+.pageTitle p { margin: 3px 0 0; color: var(--color-ink-muted); font-size: 10px; }
+.account { display: flex; align-items: center; gap: 10px; }
+.avatar { display: grid; width: 34px; aspect-ratio: 1; place-items: center; border-radius: 50%; color: var(--color-brand-dark); background: var(--color-brand-light); font-size: 10px; font-weight: 800; }
+.accountName strong, .accountName small { display: block; }
+.accountName strong { font-size: 10px; }
+.accountName small { margin-top: 2px; color: var(--color-ink-muted); font-size: 9px; }
+.content { width: min(100%, 1440px); margin: 0 auto; padding: 26px 32px 50px; }
+.menuButton, .scrim { display: none; }
+
+@media (max-width: 900px) {
+  .sidebar { width: 220px; }
+  .mainColumn { width: calc(100% - 220px); margin-left: 220px; }
+  .topbar { padding-inline: 22px; }
+  .content { padding-inline: 22px; }
+}
+
+@media (max-width: 680px) {
+  .sidebar { z-index: 8; width: 270px; transform: translateX(-100%); transition: transform 180ms ease; }
+  .sidebarOpen { transform: translateX(0); }
+  .mainColumn { width: 100%; margin-left: 0; }
+  .topbar { min-height: 68px; gap: 12px; padding: 10px 14px; }
+  .menuButton { display: grid; width: 38px; height: 38px; flex: 0 0 auto; align-content: center; justify-items: center; gap: 5px; border: 1px solid var(--color-border); border-radius: 5px; background: #ffffff; }
+  .menuButton span { width: 15px; height: 2px; background: var(--color-ink); }
+  .pageTitle { flex: 1; min-width: 0; }
+  .pageTitle h1 { overflow: hidden; font-size: 14px; text-overflow: ellipsis; white-space: nowrap; }
+  .pageTitle p { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .accountName { display: none; }
+  .content { padding: 20px 14px 36px; }
+  .scrim { position: fixed; z-index: 7; inset: 0; display: block; border: 0; background: rgb(18 35 30 / 35%); }
+}
+
+@media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }

@@ -1,0 +1,9 @@
+.card { position: relative; min-width: 0; padding: 18px; border: 1px solid var(--color-border); border-radius: var(--radius-sm); background: var(--color-panel); }
+.marker { position: absolute; top: 18px; right: 18px; width: 8px; aspect-ratio: 1; border-radius: 50%; }
+.teal { background: var(--color-teal); }
+.coral { background: var(--color-brand); }
+.blue { background: var(--color-blue); }
+.gold { background: var(--color-warning); }
+.card p { margin: 0 20px 7px 0; color: var(--color-ink-muted); font-size: 11px; }
+.card strong { display: block; overflow: hidden; color: var(--color-ink); font-family: var(--font-display); font-size: 26px; font-weight: 800; line-height: 1.15; text-overflow: ellipsis; white-space: nowrap; }
+.card small { display: block; overflow: hidden; margin-top: 8px; color: var(--color-ink-muted); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
