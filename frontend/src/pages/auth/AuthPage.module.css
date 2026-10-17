@@ -37,6 +37,7 @@
 .success { padding: 18px; border: 1px solid #b6d9ca; border-radius: var(--radius-sm); background: var(--color-primary-soft); }
 .success strong { font-size: 16px; }
 .success p { margin: 5px 0 0; color: var(--color-ink-secondary); font-size: 14px; }
+.error { margin: 0; padding: 12px; border: 1px solid var(--color-danger); border-radius: var(--radius-sm); color: var(--color-danger); background: var(--color-danger-light); font-size: 14px; }
 .mobileBrand { display: none; }
 
 @media (max-width: 760px) {

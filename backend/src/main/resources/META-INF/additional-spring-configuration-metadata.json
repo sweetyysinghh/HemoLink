@@ -1,0 +1,22 @@
+{
+  "properties": [
+    {
+      "name": "security.jwt.secret",
+      "type": "java.lang.String",
+      "description": "HMAC signing secret supplied by the environment; use at least 32 UTF-8 bytes.",
+      "sourceType": "com.hemolink.backend.config.JwtConfig"
+    },
+    {
+      "name": "security.jwt.access-token-ttl",
+      "type": "java.time.Duration",
+      "description": "Lifetime of an access token.",
+      "sourceType": "com.hemolink.backend.identity.service.JwtTokenService"
+    },
+    {
+      "name": "security.jwt.refresh-token-ttl",
+      "type": "java.time.Duration",
+      "description": "Lifetime of a refresh token.",
+      "sourceType": "com.hemolink.backend.identity.service.AuthService"
+    }
+  ]
+}
